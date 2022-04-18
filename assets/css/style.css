@@ -1,0 +1,56 @@
+body {
+  background: url(./../image/background.jpg);
+}
+
+.container {
+  font-size: 0; /* ボタンの余白をなくす */
+}
+
+#board {
+    /* 配置 */
+    position: fixed;
+    inset: 0;
+    margin: auto;
+
+  /* サイズ */
+  width: 40rem;
+  height: 40rem;
+
+  /* スタイル設定 */
+  background-color: black;
+  outline: 1.5rem solid;
+  outline-color: black;
+}
+
+#controller {
+    /* 配置 */
+    position: fixed;
+    bottom:1rem;
+    right: 1rem;
+}
+
+.square {
+  /* スタイル設定 */
+  background-color: green;
+  box-shadow: none !important;
+
+  /* サイズ指定 */
+  width: 5rem;
+  height: 5rem;
+
+  /* テキスト設定 */
+  font-size: 2.5rem;
+  text-shadow: 0.5rem;
+}
+
+.square[data-owner="black"] {
+  color: black;
+}
+
+.square[data-owner="white"] {
+    color: white;
+}
+
+.square.cant-select {
+  background-color: green;
+}
