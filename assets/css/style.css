@@ -6,11 +6,16 @@ body {
   font-size: 0; /* ボタンの余白をなくす */
 }
 
+#title {
+  text-align: center;
+  color: antiquewhite;
+}
+
 #board {
     /* 配置 */
     position: fixed;
     inset: 0;
-    margin: auto;
+    margin: 5rem auto;
 
   /* サイズ */
   width: 40rem;
@@ -25,8 +30,8 @@ body {
 #controller {
     /* 配置 */
     position: fixed;
-    bottom:1rem;
-    right: 1rem;
+    top:1rem;
+    left: 1rem;
 }
 
 .square {
@@ -53,4 +58,10 @@ body {
 
 .square.cant-select {
   background-color: green;
+}
+
+.toast,
+#btn-initialize
+ {
+  font-size: 1.6rem;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
 
 <head>
     <!-- Required meta tags -->
@@ -16,13 +16,16 @@
     <!-- Custom CSS -->
     <link href="./assets/css/style.css" rel="stylesheet" />
 
-    <title>オセロ</title>
+    <title>Othello</title>
 </head>
 
 <body>
     <div class="container">
+        <div id="title">
+            <h1>Othello</h1>
+        </div>
         <div id="board">
-            <div>
+            <div class="board-row">
                 <button type="button" class="btn btn-outline-dark square" data-row="0" data-col="0"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="0" data-col="1"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="0" data-col="2"></button>
@@ -32,7 +35,7 @@
                 <button type="button" class="btn btn-outline-dark square" data-row="0" data-col="6"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="0" data-col="7"></button>
             </div>
-            <div>
+            <div class="board-row">
                 <button type="button" class="btn btn-outline-dark square" data-row="1" data-col="0"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="1" data-col="1"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="1" data-col="2"></button>
@@ -42,7 +45,7 @@
                 <button type="button" class="btn btn-outline-dark square" data-row="1" data-col="6"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="1" data-col="7"></button>
             </div>
-            <div>
+            <div class="board-row">
                 <button type="button" class="btn btn-outline-dark square" data-row="2" data-col="0"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="2" data-col="1"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="2" data-col="2"></button>
@@ -52,7 +55,7 @@
                 <button type="button" class="btn btn-outline-dark square" data-row="2" data-col="6"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="2" data-col="7"></button>
             </div>
-            <div>
+            <div class="board-row">
                 <button type="button" class="btn btn-outline-dark square" data-row="3" data-col="0"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="3" data-col="1"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="3" data-col="2"></button>
@@ -62,7 +65,7 @@
                 <button type="button" class="btn btn-outline-dark square" data-row="3" data-col="6"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="3" data-col="7"></button>
             </div>
-            <div>
+            <div class="board-row">
                 <button type="button" class="btn btn-outline-dark square" data-row="4" data-col="0"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="4" data-col="1"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="4" data-col="2"></button>
@@ -72,7 +75,7 @@
                 <button type="button" class="btn btn-outline-dark square" data-row="4" data-col="6"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="4" data-col="7"></button>
             </div>
-            <div>
+            <div class="board-row">
                 <button type="button" class="btn btn-outline-dark square" data-row="5" data-col="0"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="5" data-col="1"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="5" data-col="2"></button>
@@ -82,7 +85,7 @@
                 <button type="button" class="btn btn-outline-dark square" data-row="5" data-col="6"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="5" data-col="7"></button>
             </div>
-            <div>
+            <div class="board-row">
                 <button type="button" class="btn btn-outline-dark square" data-row="6" data-col="0"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="6" data-col="1"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="6" data-col="2"></button>
@@ -92,7 +95,7 @@
                 <button type="button" class="btn btn-outline-dark square" data-row="6" data-col="6"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="6" data-col="7"></button>
             </div>
-            <div>
+            <div class="board-row">
                 <button type="button" class="btn btn-outline-dark square" data-row="7" data-col="0"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="7" data-col="1"></button>
                 <button type="button" class="btn btn-outline-dark square" data-row="7" data-col="2"></button>
@@ -103,7 +106,7 @@
                 <button type="button" class="btn btn-outline-dark square" data-row="7" data-col="7"></button>
             </div>
             <div id="controller">
-                <button type="button" class="btn btn-secondary" id="btn-initialize">初期化</button>
+                <button type="button" class="btn btn-secondary" id="btn-initialize">リセット</button>
             </div>
         </div>
 
@@ -112,13 +115,13 @@
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-        <!-- Optional JavaScript; choose one of the two! -->
-        <script src="./assets/js/script.js"></script>
-
         <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
+
+        <!-- Optional JavaScript; choose one of the two! -->
+        <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
