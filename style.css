@@ -1,0 +1,77 @@
+body {
+  background: url(https://github.com/oasys-tech/Reversi-4/raw/main/background.jpg);
+}
+
+.container {
+  font-size: 0; /* ボタンの余白をなくす */
+}
+
+#title {
+  /* 配置 */
+  text-align: center;
+
+  /* 色 */
+  color: antiquewhite;
+}
+
+#board {
+  /* 配置 */
+  margin: 5rem auto;
+  
+  /* サイズ */
+  width: 40rem;
+  height: 40rem;
+  
+  /* 色 */
+  background-color: black;
+  outline: 1.5rem solid;
+  outline-color: black;
+}
+
+.square {
+  /* サイズ */
+  width: 5rem;
+  height: 5rem;
+  
+  /* 色 */
+  background-color: green;
+  box-shadow: none !important;
+
+  /* フォントサイズ */
+  font-size: 2.5rem;
+}
+
+.square[data-owner="black"] {
+  color: black;
+}
+
+.square[data-owner="white"] {
+  color: white;
+}
+
+.cant-select {
+  background-color: green !important;
+}
+
+#controller {
+  /* 配置 */
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
